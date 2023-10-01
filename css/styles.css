@@ -61,21 +61,51 @@ input::-webkit-inner-spin-button {
   width: 350px;
   height: 350px;
 }
-.inputBox{
+.inputBox {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 15px;
 }
 
 /* NAVBAR */
-.navbar{
+.navbar {
   padding-left: 30px;
   padding-right: 30px;
 }
-.leftLinkTag, .rightLinkTag{
+.leftLinkTag,
+.rightLinkTag {
   font-size: 12px;
   font-weight: bold;
 }
-#logoImg{
+#logoImg {
   width: 60px;
   height: 30px;
   margin-right: 10px;
+}
+
+/* Product List */
+.productList {
+  display: flex;
+  margin-left: 30%;
+  margin-top: 10px;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+}
+.card {
+  width: 23%;
+  height: 23%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.features {
+  font-size: 10px;
+  margin-left: 2px;
+}
+.featureDetails {
+  padding: 2px;
+  margin-left: 5px;
+  width: 100%;
+}
+#addToCart{
+  margin-left: 20%;
+
 }
