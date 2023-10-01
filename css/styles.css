@@ -25,6 +25,9 @@
   height: 3px;
   width: auto;
 }
+.copyRight{
+  background-color: #24262b;
+}
 
 /* Sign In END */
 
@@ -205,3 +208,5 @@ ul > li {
 }
 
 /* Footer END */
+
+/* CART SECTION start */
