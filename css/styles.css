@@ -103,6 +103,15 @@ input::-webkit-inner-spin-button {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+.card:hover{
+  width: 23%;
+  height: 23%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.50) 0px 7px 10px;
+  transition-duration:0.5s;
+
+}
 .features {
   font-size: 10px;
   margin-left: 2px;
