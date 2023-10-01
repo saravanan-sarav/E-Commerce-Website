@@ -1,0 +1,81 @@
+/* SIGN IN PAGE */
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+.heading {
+  font-family: cursive;
+  font-weight: 700;
+  text-align: center;
+}
+.underline {
+  background-color: blue;
+  height: 3px;
+  width: auto;
+}
+
+/* SIGN UP PAGE */
+
+.SignUpInput {
+  width: 60%;
+}
+.SignUpInput1 {
+  width: 60%;
+}
+.reachUs {
+  padding-left: 30%;
+  padding-top: 10%;
+}
+.social a {
+  color: blue;
+}
+.button {
+  padding-right: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#signUpImage {
+  margin-left: 10%;
+  width: 550px;
+  height: 400px;
+}
+.signUpLeftSide {
+  margin-left: 150px;
+  width: 350px;
+  height: 350px;
+}
+.inputBox{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 15px;
+}
+
+/* NAVBAR */
+.navbar{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.leftLinkTag, .rightLinkTag{
+  font-size: 12px;
+  font-weight: bold;
+}
+#logoImg{
+  width: 60px;
+  height: 30px;
+  margin-right: 10px;
+}
