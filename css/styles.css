@@ -25,7 +25,7 @@
   height: 3px;
   width: auto;
 }
-.copyRight{
+.copyRight {
   background-color: #24262b;
 }
 
@@ -87,6 +87,14 @@ input::-webkit-inner-spin-button {
   height: 30px;
   margin-right: 10px;
 }
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 
 /* Product List */
 .productList {
@@ -103,14 +111,13 @@ input::-webkit-inner-spin-button {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.card:hover{
+.card:hover {
   width: 23%;
   height: 23%;
   margin-right: 10px;
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.50) 0px 7px 10px;
-  transition-duration:0.5s;
-
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 7px 10px;
+  transition-duration: 0.5s;
 }
 .features {
   font-size: 10px;
