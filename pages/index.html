@@ -23,7 +23,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/scripts.js"></script>
+    <script src="../scripts/scripts.js" defer></script>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
@@ -41,15 +41,18 @@
             />
           </div>
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <select class="form-select mb-3" id="userSeletor">
+              <option selected>select Seller/Buyer</option>
+              <option value="1">Seller Account</option>
+              <option value="2">Buyer Account</option>
+            </select>
             <form>
               <!-- Email input -->
               <div class="form-outline mb-2">
-                <label class="form-label" for="form3Example3"
-                  >Email Address</label
-                >
+                <label class="form-label" for="loginEmail">Email Address</label>
                 <input
                   type="email"
-                  id="form3Example3"
+                  id="loginEmail"
                   class="form-control form-control-lg"
                   placeholder="Enter a valid email address"
                 />
@@ -57,10 +60,10 @@
 
               <!-- Password input -->
               <div class="form-outline mb-3">
-                <label class="form-label" for="form3Example4">Password</label>
+                <label class="form-label" for="loginPassword">Password</label>
                 <input
                   type="password"
-                  id="form3Example4"
+                  id="loginPassword"
                   class="form-control form-control-lg"
                   placeholder="Enter password"
                 />
@@ -81,15 +84,17 @@
                 </div>
                 <a href="#!" class="text-body">Forgot password?</a>
               </div>
-
+              <p class="loginError m-2 text-danger" id="loginError"></p>
               <div class="text-center text-lg-start mt-4 pt-2">
-                <a
+                <button
                   type="button"
                   class="btn btn-primary btn-lg"
                   style="padding-left: 2.5rem; padding-right: 2.5rem"
-                  href="./home.html"
-                  >Login</a
+                  id="LoginButton"
+                  onClick="loginHandler()"
                 >
+                  Login
+                </button>
                 <p class="small fw-bold mt-2 pt-1 mb-0">
                   Don't have an account?
                   <a href="./registration.html" class="link-danger">Register</a>

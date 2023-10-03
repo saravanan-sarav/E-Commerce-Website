@@ -23,7 +23,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/scripts.js"></script>
+    <script src="../scripts/scripts.js" defer></script>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
@@ -54,11 +54,12 @@
         <p class="fs-4">Results</p>
       </div>
       <div class="">
-        <div class="row">
-          <div class="col-3 card">
+        <div class="row" id="productview">
+          <div id="productCard" class="col-3 card">
             <img
               src="../images/product.jpg"
               class="card-img-top ProductList"
+              style="height: 100%;width:50%; margin-left: 25%;"
               alt="Product Image"
             />
             <div class="card-body">
@@ -74,259 +75,10 @@
                     <li class="col-6 featureDetails">4400mAh battery</li>
                   </div>
                 </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
-              </div>
-              <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
-            </div>
-          </div>
-          <div class="col-3 card">
-            <img
-              src="../images/product.jpg"
-              class="card-img-top ProductList"
-              alt="Product Image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">iPhone 15 Pro</h5>
-              <div class="card-title features">
-                <ul class="d-flex">
-                  <div class="row">
-                    <li class="col-6 featureDetails text-break">HD Display</li>
-                    <li class="col-6 featureDetails">2 GB RAM</li>
-                  </div>
-                  <div class="row">
-                    <li class="col-6 featureDetails">512GB internal</li>
-                    <li class="col-6 featureDetails">4400mAh battery</li>
-                  </div>
-                </ul>
+                <div class="d-flex">
+                  <p class="fs-5 text-danger pt-2 me-2">₹</p>
+                  <p class="fs-3 text-danger">49,000.00</p>
+                </div>
               </div>
               <a href="#" id="addToCart" class="btn btn-success">Add to cart</a>
             </div>

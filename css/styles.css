@@ -28,6 +28,10 @@
 .copyRight {
   background-color: #24262b;
 }
+.loginError{
+  width: 100%;
+  height: 15px;
+}
 
 /* Sign In END */
 
@@ -69,6 +73,11 @@ input::-webkit-inner-spin-button {
 .inputBox {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 15px;
 }
+.errorRef{
+  margin-top: 5px;
+  width: 100%;
+  height: 15px;
+}
 
 /* SignUp END */
 
@@ -99,10 +108,10 @@ input::-webkit-inner-spin-button {
 /* Product List */
 .productList {
   display: flex;
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 10px;
-  width: 50%;
-  height: 50%;
+  width: 160px;
+  height: 150px;
   border-radius: 10px;
 }
 .card {
@@ -136,9 +145,9 @@ input::-webkit-inner-spin-button {
 
 /* Footer */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"); */
 body {
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: "Poppins", sans-serif;
 }
 * {
@@ -169,7 +178,7 @@ ul {
   font-size: 18px;
   color: #ffffff;
   text-transform: capitalize;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   font-weight: 500;
   position: relative;
 }
@@ -181,7 +190,7 @@ ul {
   background-color: #e91e63;
   height: 2px;
   box-sizing: border-box;
-  width: 80px;
+  width: 30px;
 }
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
@@ -225,4 +234,37 @@ ul > li {
 
 /* Footer END */
 
-/* CART SECTION start */
+/* Order SECTION start */
+
+.orderCard {
+  height: 40%;
+}
+.orderCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 3px 15px;
+  transition-duration: 0.1s;
+  height: 40%;
+}
+.productTracking {
+  color: aliceblue;
+  width: 50%;
+}
+.estimateDelivery {
+  color: aliceblue;
+  width: 50%;
+}
+.stockQuantity {
+  box-shadow: rgba(0, 0, 0, 0.5) 5px 3px 15px;
+}
+.totalPrice {
+  width: 100%;
+  height: 2px;
+}
+.DeleteButton {
+  margin-left: 65%;
+}
+.deliveryAddress {
+  color: aliceblue;
+}
+.orderedDate {
+  color: aliceblue;
+}
