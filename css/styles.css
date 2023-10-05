@@ -260,7 +260,8 @@ ul > li {
   height: 2px;
 }
 .DeleteButton {
-  margin-left: 65%;
+  margin-left: 45%;
+  margin-top: 10%;
 }
 .deliveryAddress {
   color: aliceblue;

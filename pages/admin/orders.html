@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admin-Order</title>
+    <title>Orders - SSS Shopping</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -27,34 +27,34 @@
     <link rel="stylesheet" href="../../css/styles.css" />
   </head>
   <body>
-    <!-- NavBar section starts -->
-    <nav class="navbar navbar-fixed-top container-fluid bg-primary-subtle d-flex">
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-fixed-top container-fluid bg-primary-subtle d-flex"
+    >
       <div class="left-side d-flex">
         <div class="logo">
-          <a href="../admin/index.html"
+          <a href="./index.html"
             ><img id="logoImg" src="../../images/logo-sss.png" alt="Logo"
           /></a>
         </div>
-        <div class="Links">
-        </div>
+        <div class="Links"></div>
       </div>
       <div class="right-side">
-        <a class="btn rightLinkTag" href="./index.html">HOME</a>
         <a class="btn rightLinkTag" href="./orders.html">ORDERS</a>
         <a class="btn rightLinkTag" href="">CONTACT</a>
-        <a class="btn btn-outline-danger rightLinkTag" href="./index.html"
+        <a class="btn btn-outline-danger rightLinkTag" href="../index.html"
           >LOGOUT</a
         >
       </div>
     </nav>
-    <!-- Navbar section ends here -->
-
-    <!-- Order Section start  -->
-    <div>
-
+    <!-- Order Section Starts -->
+    <div class="container mt-5">
+      <p class="fs-3 mt-1">Your Orders</p>
     </div>
-    <!-- Order Section End  -->
-    <!-- Footer section starts -->
+    <!-- Order Section List Start-->
+    <div class="container" id="adminOrderPage"></div>
+    <!-- Cart Section List END -->
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="mainFooter container-fluid">
         <div class="d-flex justify-content-between">
@@ -102,6 +102,5 @@
         </div>
       </div>
     </footer>
-    <!-- Footer section end -->
   </body>
 </html>
