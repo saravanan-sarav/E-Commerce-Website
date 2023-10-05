@@ -682,7 +682,11 @@ const orderPageHandler = () => {
   console.log(userIdcheck);
   console.log(orderList);
   if (userIdcheck) {
-    orderList = [...orderList, ...userIdcheck];
+    orderList = [
+      // (orderid = randomNumberGenrator()),
+      ...orderList,
+      ...userIdcheck,
+    ];
   }
   console.log(orderList);
   localStorage.setItem("orderList", JSON.stringify(orderList));
@@ -790,7 +794,7 @@ const adminOrderPage = () => {
   let tempAdminOrderPage = "";
   if (orderList.length > 0) {
     orderList = orderList.map((arr) => {
-      tempAdminOrderPage += `<div class="d-flex orderCard rounded mb-3">
+      tempAdminOrderPage += `<div class="d-flex orderCard rounded mb-5">
     <!-- S.no and Image Section -->
     <div class="d-flex m-4">
       <p class="fs-4 me-4" style="margin-top: 50%">1</p>
@@ -816,7 +820,7 @@ const adminOrderPage = () => {
       <div class="d-flex align-items-center justify-content-between mt-0">
         <p class="fs-5 mb-0">${arr.productName}</p>
         <div
-          class="d-flex bg-success mt-3 rounded ps-2 pt-1 pb-1 mb-3 me-0 orderedDate"
+          class="d-flex bg-success mt-2 rounded ps-2 pt-1 pb-1 mb-3 me-0 orderedDate"
           style="color: aliceblue"
         >
           <p class="me-1 mb-0">Ordered date:</p>
@@ -825,8 +829,11 @@ const adminOrderPage = () => {
       </div>
       <!-- Delivery Address -->
       <div class="bg-primary rounded p-1 deliveryAddress">
-        <p class="mb-0" style="font-size: 12px">Delivery Address:</p>
-        <p class="mb-0" style="font-size: 14px">${userFor.firstName},</p>
+        <p style="font-size: 12px">Delivery Address:</p>
+        <p style="font-size: 14px">${userFor.firstName}, </p>
+        <div class="d-flex"><p class="me-1" style="font-size: 14px">UserID:</p>
+        <p style="font-size: 14px" id="orderedUserId">${arr.userId}</p>
+        </div>
         <p class="mb-0" style="font-size: 14px">
           ${userFor.phoneNumber}
         </p>
@@ -843,7 +850,7 @@ const adminOrderPage = () => {
             class="form-select mt-1   bg-success-subtle"
             id="DeliverySatus"
           >
-            <option value="0" selected>${arr.deliveryStatus}</option>
+            <option value="${arr.deliveryStatus}"selected>${arr.deliveryStatus}</option>
             <option value="Dispatched">Dispatched</option>
             <option value="Pending">Pending</option>
             <option value="Delivered">Delivered</option>
@@ -861,7 +868,7 @@ const adminOrderPage = () => {
             class="form-select mt-1 bg-success-subtle"
             id="TrackingDetails"
           >
-            <option value="0" selected>${arr.TrackingDetails}</option>
+            <option value="${arr.TrackingDetails}" selected>${arr.TrackingDetails}</option>
             <option value="Today">Today</option>
             <option value="Tomorrow">Tomorrow</option>
             <option value="Delivered">Delivered</option>
@@ -877,8 +884,8 @@ const adminOrderPage = () => {
       <p class="fs-6 mt-3 mb-0">Total Price</p>
       <p class="fs-3 mb-0 text-danger">₹ ${arr.amount}.00</p>
 
-      <a class="btn btn-outline-danger DeleteButton" href=""
-        >Update Status</a
+      <button class="btn btn-outline-danger DeleteButton" onclick="adminOrderStatusChange(${arr.productID})"
+        >Update Status</button
       >
     </div>
     <p></p>
@@ -906,6 +913,37 @@ if (location.pathname === "/pages/admin/orders.html") {
 
 // Admin Status Change
 
-const adminOrderStatusChange = () => {
+const adminOrderStatusChange = (id) => {
+  let orderList = JSON.parse(localStorage.getItem("orderList"));
+  if (sessionStorage.getItem("userId")) {
+    const TrackingDetailsref = document.getElementById("TrackingDetails");
+    const DeliverySatusref = document.getElementById("DeliverySatus");
+    const orderedUserIdref = document.getElementById("orderedUserId");
+    let userId = parseInt(orderedUserIdref.innerText);
+    // console.log(typeof parseInt(orderedUserIdref.innerText));
+    // console.log(TrackingDetailsref);
+    // console.log(DeliverySatusref);
+    let updatedOrderList = orderList.find(
+      (check) =>
+        parseInt(check.productID) === parseInt(id) &&
+        parseInt(userId) === parseInt(check.userId)
+    );
+    console.log(updatedOrderList);
+    if (updatedOrderList) {
+      updatedOrderList.deliveryStatus = DeliverySatusref.value;
+      updatedOrderList.TrackingDetails = TrackingDetailsref.value;
+    } else return updatedOrderList;
+    const filteredOrder = orderList.filter(
+      (valid) =>
+        parseInt(valid.productID) !== parseInt(id) &&
+        parseInt(userId) !== parseInt(valid.userId)
+    );
 
+    localStorage.setItem("productList", JSON.stringify(filteredOrder));
+    orderList = [...filteredOrder, updatedOrderList];
+    console.log(orderList);
+    localStorage.setItem("orderList", JSON.stringify(orderList));
+  } else {
+    location.replace("/pages/index.html");
+  }
 };

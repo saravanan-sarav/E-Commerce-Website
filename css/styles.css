@@ -237,12 +237,12 @@ ul > li {
 /* Order SECTION start */
 
 .orderCard {
-  height: 40%;
+  height: 50%;
 }
 .orderCard:hover {
   box-shadow: rgba(0, 0, 0, 0.5) 5px 3px 15px;
   transition-duration: 0.1s;
-  height: 40%;
+  height: 50%;
 }
 .productTracking {
   color: aliceblue;
